@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "AIzaSyC1oRcJ7eAQaAO4kBqTJMt2w-ekoOCfj-I"; // Replace with your actual API key
+const API_KEY = "AIzaSyDfTJnURhHyK1G-RNktC1EcerwTIB413ig-ekoOCfj-I"; 
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 document.getElementById("projectRecommendationBtn").addEventListener("click", getProjectRecommendations);
@@ -14,7 +14,7 @@ async function getProjectRecommendations() {
 }
 function clearProjectRecommendations() {
     const recommendationsContainer = document.querySelector(".project-recommendations");
-    recommendationsContainer.innerHTML = ""; // Clear project recommendations
+    recommendationsContainer.innerHTML = ""; 
 }
 
 async function generateProjectRecommendations(skills) {

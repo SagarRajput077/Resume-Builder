@@ -1,24 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Resume Builder</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Builder</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
-</head>
-<body >
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lexend' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        position: relative;
+      }
+      header > nav {
+        background-color: #f5f5f5;
+        padding: 10px;
+        border-bottom: 1px solid black;
+        box-shadow: 10px 10px 20px #888888;
+      }
+      #main-section {
+        height: 500px;
+        background-image: url(./Images/original-bg.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* margin-top: 0.5%; */
+      }
+      .carousel {
+        /* background: #fafafa; */
+      }
+
+      .carousel-cell {
+        width: 20%;
+        height: 400px;
+        margin-right: 10px;
+        /* background: #8c8; */
+        border-radius: 5px;
+        counter-increment: carousel-cell;
+        margin-top: 50px;
+      }
+      .carousel-cell > img {
+        width: 100%;
+      }
+
+      #pdfDwnld > img {
+        height: 500px;
+        width: 600px;
+      } 
+      button{
+        background: linear-gradient(332deg, #E92085 -15.2%, #FD7521 66.64%);
+      }
+
+      #buttonsHover {
+        color: white;
+      }
+      #buttonsHover:hover {
+        background-color:linear-gradient(332deg, #E92085 -15.2%, #FD7521 66.64%);
+        color: black;
+        text-decoration: none;
+        box-shadow: 10px 10px 20px #888888;
+      }
+      #navbarSupportedContent {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        gap: 15px;
+      }
+
+      @media screen and (max-width: 768px) {
+        #hamburger {
+          display: block;
+        }
+
+        #anchorTags {
+          display: none;
+        }
+        #icons {
+          display: flex;
+          justify-content: start;
+          gap: 15px;
+        }
+        #pdfWithImages {
+          display: flex;
+          flex-direction: column;
+        }
+        #hwToCrt {
+          display: flex;
+          flex-direction: column;
+          margin-left: 30%;
+        }
+        #hwToCrtPtag {
+          font-size: 16px;
+        }
+        #mainFooter {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .carousel-cell {
+          height: 250px;
+          border: 2px solid black;
+        }
+        #makeResume {
+          font-size: 28px;
+        }
+        #makeResumePtag {
+          font-size: 16px;
+        }
+        #stayConnect {
+          margin-left: 16px;
+        }
+        #pdfDwnldalltags {
+          padding-top: 10px;
+        }
+        #pdfWithImages {
+          margin-bottom: 10px;
+        }
+      }
+      /* cell number */
+    </style>
+  </head>
+  <body>
     <header>
-            <div class="nav">
-                <div class="logo">
-                <img src="Assest/logo.png" alt="">
-                <P>Build Your Resume</P>
-            </div>
-            <div class="list">
-                <span class="navli">Give Your Resume The WOW Factor</span>
-            </div>
-            </div>
-    </header>   
+      <nav class="w-full flex justify-between p-4" id="navbar">
+        <div class="navdiv" style="display: flex; gap: 15px;" >
+        <a href="index.html"><img src="./Assest/logo.png" alt="" class="h-10 ml-2"/> </a>  <span style="margin-top: 8px; font-weight: 600;">Apna Resume Banao </span>
+    </div>
+        <div class="flex gap-5" id="navHeadings">
+          <div id="anchorTags" class="flex gap-5">
+            <a href="./index.html" class="font-normal text-xl pt-2">Home</a>
+            <a href="./resume.html" class="font-normal text-xl pt-2">Resume</a>
+           
+            <a href="" class="font-normal text-xl pt-2">|</a>
+          </div>
+          <div id="buttonsHover">
+            <button
+              type="button"
+              class="btn btn-primary  p-2 font-normal rounded-lg"
+              data-toggle="modal"
+              data-target="#exampleModal"
+              style="background: linear-gradient(332deg, #E92085 -15.2%, #FD7521 66.64%);border: none;"
+            >
+              Sign Up
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary  p-2 font-normal rounded-lg"
+
+              data-toggle="modal"
+              data-target="#loginModal"
+              style="background: linear-gradient(332deg, #E92085 -15.2%, #FD7521 66.64%);border: none;"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <!-- <svg
+          id="hamburger"
+          class="size-10 hidden"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4 5C3.44772 5 3 5.44772 3 6C3 6.55228 3.44772 7 4 7H20C20.5523 7 21 6.55228 21 6C21 5.44772 20.5523 5 20 5H4ZM7 12C7 11.4477 7.44772 11 8 11H20C20.5523 11 21 11.4477 21 12C21 12.5523 20.5523 13 20 13H8C7.44772 13 7 12.5523 7 12ZM13 18C13 17.4477 13.4477 17 14 17H20C20.5523 17 21 17.4477 21 18C21 18.5523 20.5523 19 20 19H14C13.4477 19 13 18.5523 13 18Z"
+            fill="#000000"
+          />
+        </svg> -->
+      </nav>
+    </header>
+
+   
+   
+    
+    
+    
+
+    <!-- Signup Button -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-center font-bold text-2xl"
+              id="exampleModalLabel"
+            >
+              Sign Up
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="email" class="font-bold">Enter your email :</label>
+            <input
+              class="p-2 border-gray-200 border-2 w-full"
+              type="email"
+              name=""
+              id="signupEmail"
+              placeholder="e.g. johndoe@gmail.com"
+            />
+          </div>
+          <div class="modal-body">
+            <label for="password" class="font-bold">Enter password :</label>
+            <input
+              class="p-2 border-gray-200 border-2 w-full"
+              type="password"
+              name=""
+              id="signupPassword"
+              placeholder="********"
+            />
+          </div>
+          <div class="modal-footer flex justify-center">
+            <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button> -->
+            <button
+              type="button"
+              class="btn btn-primary"
+              id="signUpBtn"
+              onclick="signup()"
+            >
+              Create an Account
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <p>
+              Already have an account?
+              <button
+                value="login"
+                data-toggle="modal"
+                data-target="#loginModal"
+              >
+                Login
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Button -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title text-center font-bold text-2xl"
+              id="exampleModalLabel"
+            >
+              Login
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label for="email" class="font-bold">Enter your email :</label>
+            <input
+              class="p-2 border-gray-200 border-2 w-full"
+              type="email"
+              name=""
+              id="loginEmail"
+              placeholder="e.g. johndoe@gmail.com"
+            />
+          </div>
+          <div class="modal-body">
+            <label for="password" class="font-bold">Enter password :</label>
+            <input
+              class="p-2 border-gray-200 border-2 w-full"
+              type="password"
+              name=""
+              id="loginPassword"
+              placeholder="********"
+            />
+          </div>
+          <div class="modal-footer flex justify-center">
+            <!-- <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button> -->
+            <button
+              type="button"
+              class="btn btn-primary w-2/5"
+              onclick="logIn()"
+            >
+              Login
+            </button>
+          </div>
+          <div class="modal-body text-center">
+            <p>
+              Don't have an account?
+              <button
+                value="signup"
+                data-toggle="modal"
+                data-target="#exampleModal"
+              >
+                Signup
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="middle">
         <div class="image">
             <img src="Assest/Home.png" alt="">
@@ -62,6 +397,31 @@
             <button>Start Your Resume Now</button>
         </div>
     </div>
-    
-</body>
+
+   
+    <div class="bg-gray-600">
+      <p class="text-white font-medium text-center pt-5 pb-5 text-2xl">
+        Copyright © Developed by Sagar
+      </p>
+    </div>
+
+    <script src="Index.js"></script>
+
+    <!-- Bootstrap Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
