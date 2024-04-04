@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend';
+}
+.nav{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 20rem;
+    height: 5rem;  
+    display: flex;
+   
+    text-align: center;
+    align-content: center;
+    margin-left: 4rem;
+   
+}
+.logo p{
+    margin-top: 2.3rem;
+    color: #e4732c;
+    font-weight: 600;
+}
+.logo img{
+    width: 5rem;
+    margin-right: 15px;
+    height: 5rem;
+    margin-top: 10px;
+}
+.list {
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10px;
+    border:  3px solid  #FD9D60;
+    font-weight: 600;
+    color:  #e4732c;
+    align-content: center;
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-right: 4rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list:hover {
+    background-color: #FD9D60; 
+    color: white; 
+    cursor: pointer;
+}
+.middle{
+    display: flex;
+    margin-top: 2rem;
+}
+.middle .image{
+    width: 40%;
+    height: 50%;
+    padding-left: 6rem;
+}
+.image img{
+    width: 100%;
+}
+.textarea{
+    gap: 50px;
+    padding-left: 100px;
+}
+.text1{   
+    width: 25rem;
+    height: 7rem;
+    font-size: 3rem;
+    font-weight: 540;
+    line-height: 60px;
+    font-family: 'Lexend', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.text2{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 26px;
+    margin-bottom: 15px;
+    width: 80%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.button1 button{
+    border-radius:12px;
+    background: linear-gradient(332deg, #E92085 -15.2%, #FD7521 66.64%);
+    padding: 15px 5px;
+    color: var(--text-white);
+    font-family: 'Lexend', sans-serif;
+    font-weight: 550;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: none;
+    width: 400px;
+    margin-bottom: 30px; 
+    transition: 0.5s;
+}
+.button1 button:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+}
+
+.button1 button:active {
+    transform: scale(0.95); 
+}
+.image2 img {
+    width: 300px;
+    margin-bottom: 30px;
+}
+.text3{
+    font-size: 30px;
+}
+.title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px;
+}
+.title p{
+    font-size: 35px;
+    width: 65%;
+    line-height: 36px;
+    text-align: center;
+    font-weight: 500;
+}
+.mid-foot{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+.image4 img{
+    width: 85%;
+}
+.side-mid{
+    width: 30%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.side-mid button:hover{
+    cursor: pointer;
+    transform: scale(1.05); 
+}
+.side-mid button:active{
+transform: scale(0.95);
+} 
+.footer{
+    width: 100%;
+    height: 80vh;
+    margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #23074d;
+    background: -webkit-linear-gradient(to right, #cc5333, #23074d);   
+    background: linear-gradient(to right, #cc5333, #23074d); 
+}
+.head1{
+    width: 60%;
+    text-align: center;
+
+}
+.head1 p{
+    font-size: 80px;
+    color: white;
+    font-weight: 600;
+}
+
+.footer button{
+    background: linear-gradient(332deg, #e92085cf -15.2%, #fd7521c1 66.64%); padding: 15px 5px; line-height: 32px;
+     text-align: center;
+     border-radius: 12px;
+      width: 15rem; 
+      color: white; 
+      border: none; 
+      font-size: 17px; 
+      transition: 0.5s;
+      margin-top: 80px;
+      font-weight: 600;
+}   
+
+.footer button:hover {
+    cursor: pointer;
+    transform: scale(1.05); 
+}
+
+.footer button:active {
+    transform: scale(0.95); 
+}
