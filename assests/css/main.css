@@ -150,19 +150,21 @@ a{
     padding: 1.4rem 1.6rem;
     border-radius: 4px;
     display: inline-block;
+    
 }
 
 .btn-primary{
-    background-color: var(--clr-blue);
-    color: var(--clr-white);
-    border: 1px solid var(--clr-blue);
-    transition: var(--transition);
+    background-color:  rgba(237, 18, 116, 0.637);
+    color:white ;
+    border: 2 px solid red;
     margin-left: 2rem;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin: 1rem;
 }
 
 .btn-primary:hover{
-    background-color: transparent;
-    color: var(--clr-dark);
+    transform: scale(1.1);
     border-color: var(--clr-grey);
 }
 
@@ -450,7 +452,7 @@ textarea{
 .preview-cnt{
     border-radius: 5px;
     display: grid;
-    position: fixed;
+    position: sticky;
     width: 700px;
     height: 80vh; /* Adjust the height as needed */
     grid-template-columns: 32% auto;
@@ -629,4 +631,131 @@ textarea{
         top: 0;
         overflow: hidden;
     }
+}
+
+.spinner-container {
+    display: none; /* Hide initially */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #333;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.job-recommendation-container {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        .job-recommendations {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+         .job-recommendations li {
+            background-color: #fff;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .project-recommendations {
+background-color: #f8f9fa;
+padding: 20px;
+border-radius: 5px;
+margin-top: 20px;
+}
+.project-recommendation-container{
+background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 80%; 
+        max-width: 1200px; 
+        border: 1px solid #ccc;
+        overflow-x: auto; 
+        white-space: nowrap; 
+}
+.job-recommendation-container {
+        width: 80%; /* Adjust the width as needed */
+        max-width: 1200px; /* Set a maximum width */
+        border: 1px solid #ccc;
+        overflow-x: auto; /* Add horizontal scrollbar */
+        white-space: nowrap; /* Prevent line breaks */
+    }
+
+    .job-recommendations {
+        display: inline-block; /* Display as inline block to prevent line breaks */
+        padding: 10px; /* Add padding for spacing */
+    }
+
+    /* Optional: Style for the scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+.markdown-container {
+padding: 20px;
+border-radius: 5px;
+margin-top: 20px;
+background-color: #d7f7f1;;
+color: #333;
+font-family: Arial, sans-serif;
+}
+
+/* Markdown Heading */
+.markdown-container h1, .markdown-container h2, .markdown-container h3, .markdown-container h4, .markdown-container h5, .markdown-container h6 {
+color: #007bff;
+}
+
+/* Markdown Paragraph */
+.markdown-container p {
+margin-bottom: 10px;
+}
+
+/* Markdown List */
+.markdown-container ul, .markdown-container ol {
+margin-bottom: 10px;
+}
+
+/* Markdown List Item */
+.markdown-container li {
+margin-left: 20px;
 }
