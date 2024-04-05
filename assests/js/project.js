@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = "AIzaSyBC2EOlzwv9WMMIwVeKYbVJgsJWxiQ9dg4"; // Replace with your actual API key
+const API_KEY = "AIzaSyC1oRcJ7eAQaAO4kBqTJMt2w-ekoOCfj-I"; // Replace with your actual API key
 const genAI = new GoogleGenerativeAI(API_KEY);
 
 document.getElementById("projectRecommendationBtn").addEventListener("click", getProjectRecommendations);
@@ -24,10 +24,6 @@ async function generateProjectRecommendations(skills) {
 function displayProjectRecommendations(projectRecommendations) {
     const popupWindow = window.open("", "Project Recommendations", "width=600,height=400,scrollbars=yes,resizable=yes");
 
-    if (!popupWindow) {
-        alert("Please allow popups for this site!");
-        return;
-    }
 
     const convertedHTML = convertMarkdownToHtml(projectRecommendations.join("\n\n"));
     popupWindow.document.body.innerHTML = convertedHTML;

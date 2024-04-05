@@ -26,6 +26,7 @@
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 9999;
+        
         display: none;
     }
 
@@ -36,6 +37,7 @@
         width: 50px;
         height: 50px;
         animation: spin 1s linear infinite;
+        
     }
 
     @keyframes spin {
@@ -53,12 +55,15 @@
                 margin-left: auto;
                 margin-right: auto;
                 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                
             }
         
             .job-recommendations {
                 list-style: none;
                 padding: 0;
                 margin: 0;
+                width: auto;
+                margin-left: 30px;
             }
         
              .job-recommendations li {
@@ -68,27 +73,8 @@
                 padding: 10px;
                 margin-bottom: 10px;
             }
-            .project-recommendations {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-}
-.project-recommendation-container{
-    background-color: #f8f9fa;
-                border: 1px solid #ced4da;
-                border-radius: 5px;
-                padding: 20px;
-                margin-top: 30px;
-                margin-left: auto;
-                margin-right: auto;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                width: 80%; 
-            max-width: 1200px; 
-            border: 1px solid #ccc;
-            overflow-x: auto; 
-            white-space: nowrap; 
-}
+            
+
 .job-recommendation-container {
             width: 80%; /* Adjust the width as needed */
             max-width: 1200px; /* Set a maximum width */
@@ -100,6 +86,7 @@
         .job-recommendations {
             display: inline-block; /* Display as inline block to prevent line breaks */
             padding: 10px; /* Add padding for spacing */
+            
         }
 
         /* Optional: Style for the scrollbar */
@@ -118,34 +105,9 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
-.markdown-container {
-    padding: 20px;
-    border-radius: 5px;
-    margin-top: 20px;
-    background-color: #d7f7f1;;
-    color: #333;
-    font-family: Arial, sans-serif;
-}
 
 /* Markdown Heading */
-.markdown-container h1, .markdown-container h2, .markdown-container h3, .markdown-container h4, .markdown-container h5, .markdown-container h6 {
-    color: #007bff;
-}
 
-/* Markdown Paragraph */
-.markdown-container p {
-    margin-bottom: 10px;
-}
-
-/* Markdown List */
-.markdown-container ul, .markdown-container ol {
-    margin-bottom: 10px;
-}
-
-/* Markdown List Item */
-.markdown-container li {
-    margin-left: 20px;
-}
         </style>
     
     </head>
@@ -527,12 +489,10 @@
         <div class="spinner"></div>
     </div>
 
-    <section class="job-recommendation-container" style="background-color:  #d7f7f1;">
+    <section class="job-recommendation-container" style="background-color:  #ffffff;">
         <div class="job-recommendations"></div>
     </section>
-    <section class="project-recommendation-container" style="background-color:  #d7f7f1;">
-        <div class="project-recommendations markdown-container"></div>
-    </section>
+    
 </div>   
 <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.js" integrity="sha512-bZAXvpVfp1+9AUHQzekEZaXclsgSlAeEnMJ6LfFAvjqYUVZfcuVXeQoN5LhD7Uw0Jy4NCY9q3kbdEXbwhZUmUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

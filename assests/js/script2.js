@@ -1,5 +1,5 @@
 
-const githubUrl = 'https://api.github.com/users/SagarRajput077';
+const githubUrl = 'https://api.github.com/users/akanksha-18';
 
 async function fetchData() {
     try {
