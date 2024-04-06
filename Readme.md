@@ -2,6 +2,8 @@
 
 ## Overview
 
+## Hosted Link - https://sagarrajput077.github.io/Resume-Builder/
+
 The Resume Builder is an application designed to assist users in creating professional resumes. It offers job recommendations based on user skills and experiences, along with project recommendations to enhance resume content.
 
 ## Features
