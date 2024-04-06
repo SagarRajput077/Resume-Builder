@@ -200,3 +200,120 @@ transform: scale(0.95);
 .footer button:active {
     transform: scale(0.95); 
 }
+
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .logo {
+        width: auto;
+        margin-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .logo p {
+        margin-top: 0;
+    }
+
+    .list {
+        width: auto;
+        margin: 0;
+    }
+
+    .middle .image {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .textarea {
+        padding-left: 0;
+    }
+
+    .button1 button {
+        width: auto;
+    }
+
+    .title {
+        padding: 2rem;
+    }
+
+    .head1 p {
+        font-size: 4rem;
+    }
+
+    .side-mid {
+        width: auto;
+        margin-right: 0;
+    }
+
+    .footer {
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .nav {
+        padding: 0 2rem;
+    }
+
+    .logo {
+        margin-left: 4rem;
+    }
+
+    .list {
+        margin-right: 4rem;
+    }
+
+    .middle .image {
+        padding-left: 6rem;
+    }
+
+    .textarea {
+        padding-left: 100px;
+    }
+
+    .button1 button {
+        width: 400px;
+    }
+
+    .title {
+        padding: 70px;
+    }
+
+    .side-mid {
+        margin-right: 80px;
+    }
+
+    .footer {
+        margin-top: 7rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav {
+        padding: 0 4rem;
+    }
+
+    .middle .image {
+        padding-left: 8rem;
+    }
+
+    .textarea {
+        padding-left: 120px;
+    }
+
+    .title {
+        padding: 100px;
+    }
+
+    .side-mid {
+        margin-right: 100px;
+    }
+
+    .footer {
+        margin-top: 10rem;
+    }
+}
